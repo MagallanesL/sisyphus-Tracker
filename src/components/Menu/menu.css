@@ -1,0 +1,82 @@
+/* src/components/Menu.css */
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-container.open {
+    transform: translateX(0);
+  }
+  
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .menu {
+    padding: 15% 0;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin: 10px 0;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .menu-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .menu {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .menu ul {
+      display: flex;
+    }
+  
+    .menu ul li {
+      margin: 0;
+    }
+  
+    .menu ul li a {
+      padding: 15px 10px;
+    }
+  }
+  
